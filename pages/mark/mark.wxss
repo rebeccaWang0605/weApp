@@ -1,0 +1,21 @@
+/* pages/mark/mark.wxss */
+.user-container{
+    padding:0 25rpx;
+}
+.user-info{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-name{
+    font-size:28rpx;
+}
+.avatar{
+    width:60rpx;
+    height:60rpx;
+    border-radius:50%;
+}
+.image{
+    width:50rpx;
+    height:50rpx;
+}

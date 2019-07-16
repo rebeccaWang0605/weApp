@@ -1,0 +1,14 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+<view class="container">
+    <d-search key-words="{{keyWords}}"/>
+    <view class="search-recommmend">
+        <view class="search-container">
+            <view class="title">#{{tag}}></view>
+            <view wx:for="{{recommend}}" wx:key="*this"
+            class="recommend">{{item}}</view>
+        </view>  
+    </view>
+
+    <d-articleList article-detail="{{searchArticleList}}" more="{{more}}" key-word="{{tag}}"/>
+</view>

@@ -1,0 +1,4 @@
+<!--components/subscribe/cmp.wxml-->
+<!-- <text>components/subscribe/cmp.wxml</text> -->
+<view   class="container {{className === 'common'?'':'subscribe'}}" 
+        catch:tap="onTap">{{className === 'common' ? '订阅':'已订阅'}}</view>

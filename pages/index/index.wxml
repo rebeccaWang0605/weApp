@@ -1,0 +1,72 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<!-- <d-bigImg  img-src="https://ps.ssl.qhmsg.com/bdr/_240_/t0183f41e934770c6d8.jpg"              main-title="阶级的看到没打卡开始麦卡杜"></d-bigImg> -->
+
+<!-- <d-pureText main-title="及大家高配宫颈癌" sub-title="就个I阿更可怕更可怕"/> -->
+<!-- <d-imgText  main-title="加工碰个高洁丝欧冠奇偶干净而奥头加工品" 
+            sub-title="个奇偶的硅胶阿尔排就个I哦啊而根据噢挨饿噶骨汤" 
+            img-src="https://ps.ssl.qhmsg.com/bdr/_240_/t0183f41e934770c6d8.jpg"/> -->
+
+<!-- <d-nineImg img-arr="{{imgArr}}" mainTitle="hi殴哥哥哥哦苹果可哦苹果破案gap"/> -->
+
+<!-- <d-video 
+         video-src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+         img-src='https://ps.ssl.qhimg.com/sdmt/197_162_100/t0149197391487e5ce2.webp'
+         main-title="挤公交的股票的更可怕看鬼片额阿瓦噶啥"
+         duration="41'"
+         video-id="video201902"/>
+
+         <d-tag tag="心理" tagId="3"/>
+
+         <d-more tag="读书"/>
+
+         <d-like like="true"/> -->
+
+
+    <!-- 属性	          类型	       默认值	必填	说明	        最低版本 -->
+<!--    scroll-x	    boolean	      false	    否	允许横向滚动	    1.0.0
+        scroll-y	    boolean	      false	    否	允许纵向滚动	    1.0.0
+        upper-threshold	number/string	50	    否	距顶部/左边多远时，触发 scrolltoupper 事件	1.0.0
+        lower-threshold	number/string	50	    否	距底部/右边多远时，触发 scrolltolower 事件	1.0.0
+        scroll-top	     number/string		    否	设置竖向滚动条位置	  1.0.0  单位px
+        scroll-left	     number/string		    否	设置横向滚动条位置	  1.0.0
+        scroll-into-view	  string		        否	值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素	                     1.0.0
+        scroll-with-animation  boolean	false	否	在设置滚动条位置时使用动画过渡	1.0.0
+        enable-back-to-top	   boolean	false	否	iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向	                                           1.0.0
+        bindscrolltoupper	eventhandle		    否	滚动到顶部/左边时触发  1.0.0
+        bindscrolltolower	eventhandle		    否	滚动到底部/右边时触发  1.0.0
+        bindscroll	        eventhandle		    否	滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}	         1.0.0 -->
+
+
+<!--1、tip: 基础库 2.4.0以下不支持嵌套textarea、map、canvas、video 组件
+    2、tip: scroll-into-view 的优先级高于 scroll-top
+    3、tip: 在滚动 scroll-view 时会阻止页面回弹，所以在 scroll-view 中滚动，是无法触发 onPullDownRefresh
+    4、tip: 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view ，这样也能通过点击顶部状态栏回到页面顶部 -->
+        <!-- <scroll-view    class="container"
+                        scroll-top="{{80}}"   
+                        scroll-y="{{true}}"
+                        scroll-into-view="blue">
+            <view class="red color"></view>
+            <view class="green color"></view>
+            <view class="blue color" id="blue"></view>
+        </scroll-view> -->
+
+        <d-nav bind:changePage="change" class="nav"/>
+
+        <d-recommend recommend="{{recommendInfo}}" class="recommend"
+                     magzine-id="{{magzineId}}"/>
+         
+         <d-tagList mark-type="{{markTypeList}}" class="tag-list">
+            <d-add slot="before" class="tag" wx:if="{{magzineId == 0 }}"/>
+            <text  slot="after" class="tag to-catelog"
+                    catch:tap="toCatelog"
+                    wx:if="{{magzineId == 0 }}">•••</text>
+         </d-tagList>
+
+        <d-articleList  article-detail="{{articleList}}" 
+                        more="{{getMore}}" 
+                        magzine-id="{{magzineId}}"/>
+
+        <view class="loading-container" wx:if="{{loading}}">
+            <d-loading class="loading" />
+        </view>

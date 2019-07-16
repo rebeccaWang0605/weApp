@@ -1,0 +1,42 @@
+/* pages/catelog/catelog.wxss */
+
+.mark-container{
+    width:750rpx;
+    padding:20rpx 30rpx 0;
+    box-sizing: border-box;
+}
+.manage{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20rpx 0;
+    font-size:32rpx;
+}
+.add{
+    display:inline-block;
+    margin-right:20rpx;
+}
+
+.tag-info{
+    width:750rpx;
+    padding:30rpx;
+    box-sizing: border-box;
+}
+.tag-content{
+    font-size:32rpx;
+    padding:20rpx 0;
+}
+.tag-subscribe{
+    display:flex;
+    justify-content: space-between;
+    font-size:30rpx;
+    padding:10rpx 0;
+    align-items: center;
+}
+
+.text{
+    vertical-align: middle;
+}
+.weight{
+    font-weight:600;
+}

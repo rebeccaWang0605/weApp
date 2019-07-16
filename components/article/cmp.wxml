@@ -1,0 +1,48 @@
+<!--components/article/cmp.wxml-->
+<!-- <text>components/article/cmp.wxml</text> -->
+
+<view class="container">
+    <view class="header-container">
+        <image class="avator" src="{{article.mark.avatar}}" />
+        <text class="text">{{article.mark.people}} 等{{article.mark.count}}人马克了</text>
+    </view>
+    <view class="article-container">
+        <d-bigImg   img-src="{{article.imgArray[0]}}"              
+                    main-title="{{article.mainTitle}}"
+                    wx:if="{{article.type === 0}}" />
+
+        <d-pureText main-title="{{article.mainTitle}}" 
+                    sub-title="{{article.subHead}}"
+                    wx:elif="{{article.type === 4}}"/>
+
+        <d-imgText  main-title="{{article.mainTitle}}" 
+                    sub-title="{{article.subHead}}" 
+                    img-src="{{article.imgArray[0]}}"
+                    wx:elif="{{article.type === 2}}"/>
+
+        <d-nineImg  img-arr="{{article.imgArray}}" 
+                    mainTitle="{{article.mainTitle}}"
+                    wx:elif="{{article.type === 1}}"/>
+
+        <d-video 
+                    video-src="{{article.video.src}}"
+                    img-src='{{article.video.poster}}'
+                    main-title="{{article.mainTitle}}"
+                    duration="{{article.video.duration}}"
+                    video-id="{{article.video.id}}"
+                    wx:else/>
+    </view>
+    <view class="bottom-container">
+        <view>
+             <d-tag tag="{{article.tag}}" tagId="{{article.tagId}}"/>
+        </view>
+        <view class="icon-container">
+            <d-more tag="{{article.tag}}"/>
+            <d-imgButton open-type="share">
+                <image src="/article/icon/Icon_relay.png" slot="img" class="image" />
+            </d-imgButton>
+            <d-like like="{{likeStatus}}" bind:like="onLike" /> 
+        </view>
+       
+    </view>
+</view>

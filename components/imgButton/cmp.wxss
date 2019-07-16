@@ -1,0 +1,10 @@
+/* components/imgButton/cmp.wxss */
+.btn{
+    background:transparent;
+    margin:0;
+    display:inline-block;
+    padding:0;
+}
+.btn::after{
+    border:none;
+}

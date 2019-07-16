@@ -1,0 +1,24 @@
+/* components/search/cmp.wxss */
+.container{
+    width:750rpx;
+    padding:30rpx;
+    box-sizing:border-box;
+    display:flex;
+}
+.ipt{
+    width:550rpx;
+    height:60rpx;
+    background:#eee;
+    padding:0 20rpx;
+    font-size:28rpx;
+    color:#666;
+}
+.text{
+    width:100rpx;
+    border:2rpx solid #eee;
+    text-align: center;
+    line-height:60rpx;
+    box-sizing: border-box;
+    height:60rpx;
+    font-size:30rpx;
+}

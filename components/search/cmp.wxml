@@ -1,0 +1,11 @@
+<!--components/search/cmp.wxml-->
+<!-- <text>components/search/cmp.wxml</text> -->
+
+<view class="container">
+    <input type="text" placeholder="轻芒什么都有" class="ipt"
+           bindconfirm="onConfirm"
+           bindblur="onBlur"
+           bindfocus="onFocus" 
+           value="{{keyWords}}"/>
+    <text class="text" catch:tap="onConfirm">搜索</text>
+</view>

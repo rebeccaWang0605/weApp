@@ -1,0 +1,5 @@
+<!--components/more/cmp.wxml-->
+<!-- <text>components/more/cmp.wxml</text> -->
+<view class="container" catch:tap="onTap">
+    <image class="image" src="/article/icon/Icon_more.png" />
+</view>

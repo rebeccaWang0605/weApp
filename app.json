@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/catelog/catelog",
+    "pages/index/index",
+    "pages/type/type",
+    "pages/mark/mark",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/catelog/catelog",
+        "text": "目录"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "杂志"
+      },
+      {
+        "pagePath": "pages/mark/mark",
+        "text": "马克"
+      }
+    ]
+  }
+}

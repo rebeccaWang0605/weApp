@@ -1,0 +1,14 @@
+/* pages/bigImg/cmp.wxss */
+.container{
+    width:700rpx;
+}
+
+.image{
+    width:700rpx;
+}
+.text{
+    display:block;
+    padding:20rpx;
+    font-size:40rpx;
+    font-weight:400rpx;
+}

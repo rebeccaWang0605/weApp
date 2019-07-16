@@ -1,0 +1,6 @@
+/* components/tagList/cmp.wxss */
+.tag{
+    display:inline-block;
+    margin-right:20rpx;
+    margin-bottom:20rpx;
+}

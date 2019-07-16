@@ -1,0 +1,19 @@
+/* pages/search/search.wxss */
+
+.search-recommmend{
+    padding:0 30rpx;
+    margin:30rpx 0 50rpx;
+}
+.search-container{
+    border-top:2rpx solid #333;
+    border-bottom:2rpx solid #333;
+    padding:30rpx 0;
+}
+.title{
+    font-size:36rpx;
+    padding:10rpx 0;
+}
+.recommend{
+    font-size:30rpx;
+    padding:10rpx 0;
+}

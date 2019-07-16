@@ -1,0 +1,23 @@
+<!--pages/catelog/catelog.wxml-->
+<!-- <text>pages/catelog/catelog.wxml</text> -->
+<view class="container">
+    <d-search key-words="{{keyWords}}"/>
+    <view class="mark-container">
+        <view class="manage">
+            <text>我的马克</text>
+            <text>管理编辑</text>
+        </view>
+        <d-tagList mark-type="{{markList}}">
+            <d-add slot="before" class="add" />
+        </d-tagList>
+    </view>
+    <view class="tag-info">
+        <view class="tag-content" wx:for="{{tagInfoList}}"  wx:for-item="tagInfo" wx:key="tagInfo">
+            <view class="weight">{{tagInfo.title}} ></view>
+            <view class="tag-subscribe" wx:for="{{tagInfo.tagList}}" wx:key="item.tagId">
+                <view class="text"># {{item.tag}}</view>
+                <d-subscribe tag="{{item.tag}}" tag-id="{{item.tagId}}" bind:subscribe="getMarkList"/>
+            </view>
+        </view>  
+    </view>
+</view>
