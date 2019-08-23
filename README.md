@@ -1,1 +1,0 @@
-the sample from duyiedu.com
